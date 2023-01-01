@@ -13,5 +13,11 @@ Let's study about TDD(Test Driven Development) with Udemy lecture.
 
 failing Unit Test를 작성한다. -> Test를 통과 한다. -> Refactoring -> 다시 Unit Test를 작성 ....
 
+### 왜 TDD를 써야할까?
+
+- 보다 신뢰성을 갖고 앱 코드를 작성하고 변경할 수 있다. 예를 들면 앱 개발 후 2~3년 뒤에 어떤 변경을 해야할때, 기존에 이미 작성된 Unit Test를 사용할 수도 있다. 이때 보다 신뢰성을 갖고 코드를 변경할 수 있을 것이다.
+- 사람이 직접 테스트할 필요 없이 UI testing을 사용하여 User Interface를 자동화 할 수 있다. 
+- Testing은 보다 나은 software architecture를 만들 수 있도록 도와준다.
+
 
 
