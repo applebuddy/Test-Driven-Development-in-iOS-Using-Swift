@@ -5,6 +5,8 @@ Let's study about TDD(Test Driven Development) with Udemy Lecture.
 
 
 
+## Section 2: Understanding Test Driven Development?
+
 ### 2-5. What is the TDD(Test Driven Development)?
 
 많은 테스터가 앱을 테스트할 수 있다. 이때 테스트 기반 개발, TDD를 활용할 수 있다. TDD는 단순 테스팅하는 과정만 의미하는 것이 아닌. 앱에 대한 하나의 Architecture이다. TDD기반에서는 앱을 동작시키기 위한 코드만 작성하지 않는다. 그전에 unit test 코드를 작성할 수 있다.
@@ -59,9 +61,23 @@ failing Unit Test를 작성한다. -> Test를 통과 한다. -> Refactoring -> �
 #### 좋은 테스팅을 위한 규칙
 
 - Independent, 독립적이어야 한다.
+  - Wi-Fi 연결, 데이터 베이스 접근 등이 불필요해야 한다.
 - Automatic, 자동화가 되어야 한다.
+  - 늦은 밤, 새벽에 수동적으로 개발자가 수동 테스트를 하면 불편하다.. 테스트 자동화를 활용해야 한다.
 - Repeatable, 반복 가능해야 한다.
-  - 하나의 Unit Test에서 50번, 100번의 반복 동작이 있는 경우는 좋은 Unit Test가 아니다.
-  - Test를 통과하던, 실패하던, 반복가능한 결과를 생산할 수 있어야 한다.
+  - 수십번을 반복해야 제대로된 결과가 나온다면, 끔찍할 것이다.
+  - 각각의 테스트들에 대해서 반복을 하여도 정확한 결과가 나와야 한다. 성패 여부에 관계 없이
+  - Test를 통과하던, 실패하던, 각각의 테스트에 대해 반복가능한 결과를 생산할 수 있어야 한다.
 - Readable, 가독성을 신경쓴다. 나만 알아볼 수 있게가 아닌, 다음 사람도 이해할 수 있도록 작성하는 것이 좋다.
 
+
+
+## Section 3: Types of Testing
+
+### 3-11. Unit Testing
+
+- Unit testing이란, 기본적으로는 매우 구체적이고 적은 양의 코드에 대한 테스트를 수행하는 것이다.
+- Unit testing은 메모리 상에서 빠르게 동작해야한다.
+- Unit testing 간 Network를 사용하지 않는다. (인터넷에 연결될 필요가 없어야 한다.)
+- Unit testing 간 데이터베이스를 건드리지 않는다. DB를 건드리면 그건 DB 테스트가 섞이게 된다.
+- Unit testing 간 시스템 파일이 섞이면 안된다.
