@@ -81,3 +81,27 @@ failing Unit Test를 작성한다. -> Test를 통과 한다. -> Refactoring -> �
 - Unit testing 간 Network를 사용하지 않는다. (인터넷에 연결될 필요가 없어야 한다.)
 - Unit testing 간 데이터베이스를 건드리지 않는다. DB를 건드리면 그건 DB 테스트가 섞이게 된다.
 - Unit testing 간 시스템 파일이 섞이면 안된다.
+
+
+
+### 3-12. User Interface Testing
+
+- 앱을 실행하고, 무언가 입력하고, 터치하고, 기능을 수행하는 과정이 정상적으로 동작하는지 테스트 코드를 작성하여 테스트 하는 것
+- User Interface Test code를 작성하여 테스트 자동화를 돌릴 수 있다.
+
+
+
+### 3-13. Integration Testing
+
+- UI, Domain logics, Services (login, registration, image services...), Database등을 개별적으로 테스트할 수 있다.
+- 위의 요소들을 통합해서 테스트하는 것을 Integration Testing이라고 한다.
+- Integration Testing은 모든 요소가 정상 동작하는지 봐야하기 때문에 실제 시나리오를 염두하고 진행된다.
+- 물론 Integration Testing에 Testing Data가 사용될 수 있다. 하지만, 마지막 단계에서는 Acceptance Testing을 진행한다. 이때에는 실제 하드웨어, 서버, 데이터와 함께 Test가 수행된다.
+
+
+
+### 3-14. Acceptance Testing
+
+- 실제 하드웨어, 서버, 데이터와 함께 수행되는 Test
+- 실제 환경 속에서 실제 프로젝트의 사업 기준, 요구사항에 충족될 수 있는지를 평가한다.
+- client, end user에 의해 수행된다.
