@@ -105,3 +105,26 @@ failing Unit Test를 작성한다. -> Test를 통과 한다. -> Refactoring -> �
 - 실제 하드웨어, 서버, 데이터와 함께 수행되는 Test
 - 실제 환경 속에서 실제 프로젝트의 사업 기준, 요구사항에 충족될 수 있는지를 평가한다.
 - client, end user에 의해 수행된다.
+
+
+
+### 3-15. Performance Testing
+
+- Throughput : 특정 시간 내에 앱에서 처리되는 요청 / 트랜젝션 수
+  - 시간내에 처리되는 횟수가 실제로 사용하기에 충분한 횟수인가?
+- Response Time : 요청 이후 첫 응답까지의 시간이 얼마나 소요되나? 그것이 고객이 기다릴 수 있는 소요시간인가?
+  - 가능한 응답시간이 짧으면 좋다. (당연)
+- Tuning : 앱의 bottleneck 문제를 식별하고 제거하기 위해 사용되는 처리절차
+- Benchmarking : 산업 내의 타 회사의 최고의 실 사례를 찾아서 비교하는 것
+
+
+
+### Testinig References
+
+- Types of Testing
+
+  - https://hackr.io/blog/types-of-software-testing
+
+- Performance Testing
+
+  - #### https://www.slideshare.net/Bugraptors/performance-testing-1
