@@ -17,7 +17,7 @@ final class When_calculating_tip_based_on_total_amount: XCTestCase {
   // 아래 테스트 메서드는 독립적이다. 수백, 수십번 실행되어도 동일한 input에 대해 동일한 output이 나올 것이다.
   func test_should_calculate_tip_successfully() {
     let tipCalculator = TipCalculator()
-    let tip = tipCalculator.calculate(total: 100, tipPercentage: 0.1)
+    let tip = try? tipCalculator.calculate(total: 100, tipPercentage: 0.1)
     // tip의 값이 10이 아니면 failed 10이면 success
     XCTAssertEqual(10, tip)
   }
@@ -33,4 +33,18 @@ final class When_calculating_tip_based_on_total_amount: XCTestCase {
     XCTAssertEqual(result, 10)
   }
   */
+}
+
+class When_calculating_tip_based_on_negative_total_amount: XCTestCase {
+  
+  func test_should_throw_invalid_input_exception() {
+    
+    let tipCalculator = TipCalculator()
+    // Error가 발생하는지 체크할때 사용
+    XCTAssertThrowsError(try tipCalculator.calculate(total: -100, tipPercentage: 0.1), "") { error in
+      // 에러가 발생했을때 A 에러인지, B 에러인지 등을 비교할 수 있다.
+      XCTAssertEqual(error as! TipCalculatorError, TipCalculatorError.invalidInput)
+    }
+    
+  }
 }
