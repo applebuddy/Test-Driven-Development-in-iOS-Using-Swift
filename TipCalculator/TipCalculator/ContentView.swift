@@ -16,6 +16,8 @@ struct ContentView: View {
   @State private var tip: String?
   @State private var message: String = ""
   
+  let tipCalculator = TipCalculator()
+  
   var body: some View {
     NavigationView {
       VStack {
@@ -32,8 +34,25 @@ struct ContentView: View {
         
         
         Button("Calculate Tip") {
-          
-          
+          message = ""
+          tip = ""
+
+          guard let total = Double(self.total) else {
+            // 입력 값이 숫자로 변환이 불가능한 상태인 경우
+            message = "Invalid Input"
+            return
+          }
+          do {
+            let result = try tipCalculator.calculate(total: total, tipPercentage: tipPercentage)
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .currency
+            tip = formatter.string(from: NSNumber(value: result))
+            
+          } catch TipCalculatorError.invalidInput {
+            message = "Invalid Input"
+          } catch {
+            message = error.localizedDescription
+          }
         }.padding(.top, 20)
         
         Text(message)
